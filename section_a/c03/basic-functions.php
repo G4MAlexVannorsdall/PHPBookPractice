@@ -6,8 +6,9 @@ function write_logo()
 
 function write_copyright_notice()
 {
-    $year = date('Y');
-    echo '&copy; ' . $year;
+    $year = date('Y') . PHP_EOL;
+    echo '&copy; ' . $year . PHP_EOL;
+    echo 'The Candy Store' . PHP_EOL;
 }
 ?>
 <!DOCTYPE html>

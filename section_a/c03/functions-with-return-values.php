@@ -7,7 +7,7 @@ function create_logo()
 function create_copyright_notice()
 {
     $year    = date('Y');
-    $message = '&copy; ' . $year;
+    $message = '&copy; ' . $year . 'The Candy Store';
     return $message;
 }
 ?>
