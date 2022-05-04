@@ -4,6 +4,7 @@ $rates = [
     'uk' => 0.81,
     'eu' => 0.93,
     'jp' => 113.21,
+    'au' => 1.32,
 ];
 
 function calculate_prices($usd, $exchange_rates)
@@ -12,6 +13,7 @@ function calculate_prices($usd, $exchange_rates)
         'pound' => $usd * $exchange_rates['uk'],
         'euro'  => $usd * $exchange_rates['eu'],
         'yen'   => $usd * $exchange_rates['jp'],
+        'dollar' => $usd * $exchange_rates['au'],
     ];
     return $prices;
 }
@@ -19,7 +21,7 @@ function calculate_prices($usd, $exchange_rates)
 $global_prices = calculate_prices($us_price, $rates);
 ?>
 <!DOCTYPE html>
-<html> 
+<html lang=""> 
   <head>
     <title>Functions with Multiple Values</title>
     <link rel="stylesheet" href="css/styles.css">
@@ -30,6 +32,7 @@ $global_prices = calculate_prices($us_price, $rates);
     <p>US $<?= $us_price ?></p>
     <p>(UK &pound; <?= $global_prices['pound'] ?> | 
         EU &euro;  <?= $global_prices['euro']  ?> | 
-        JP &yen;   <?= $global_prices['yen'] ?>)</p>
+        JP &yen;   <?= $global_prices['yen'] ?> |
+        AU &dollar; <?= $global_prices['au'] ?>) </p>
   </body>
 </html>
